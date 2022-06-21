@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Movie List</title>
+</head>
+
+<body>
+	<h1>Add a movie</h1>
+	<form method="POST" action="add">
+		{% csrf_token %}
+        <div>
+            <p>
+                <label for = "title">Title:</label>
+                <input type="text" id="title" name="title" />
+            </p>
+        </div>
+        <div>
+            <p>
+                <label for = "director">Director:</label>
+                <input type="text" id="director" name="director" />
+            </p>
+        </div>
+        <div>
+            <p>
+                <label for = "genre">Genre:</label>
+                <input type="text" id="genre" name="genre" />
+            </p>
+        </div>
+        <div>
+            <p>
+				<label for="description">Description</label>
+				<textarea id="description" name="description" rows="5" cols="50"></textarea>
+            </p>
+        </div>
+		<div>
+			<p>
+				<label for="rating">Rating</label>
+				<input id="rating" type="number" name="rating" min="0" max="5">			
+			</p>
+		</div>
+		<div>
+			<p>
+				<label for="watched">Watched</label>
+				<input id="watched" type="checkbox" name="watched">			
+			</p>
+		</div>
+        <div>
+            <p>
+                <label for="imdb_link">IMDB link</label>
+<input type="url" name="imdb_link" id="imdb_link"
+       placeholder="https://imdb.com"
+       pattern="https://.*" size="30">
+            </p>
+        </div>
+        <div>
+            <p>
+                <button type="submit">Add Movie</button>
+            </p>
+        </div>
+    </form>
+
+</body>
+
+</html>
