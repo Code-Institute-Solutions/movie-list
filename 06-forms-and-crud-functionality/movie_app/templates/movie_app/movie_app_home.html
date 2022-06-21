@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Movie List</title>
+</head>
+
+<body>
+	<h1>Movie List</h1>
+	<h4>List movie you have watched or want to watch</h4>
+	<table>
+		<tr>
+			<th>Movie Title</th>
+			<th>Director</th>
+			<th>Genre</th>
+			<th>Description</th>
+			<th>Imdb page</th>
+			<th>Rating (/5)</th>
+			<th>Edit</th>
+			<th>Toggle</th>
+			<th>Delete</th>
+		</tr>
+		{% for movie in movies %}
+		<tr>
+		  {% if movie.watched %}
+		  <td><s>{{ movie.title }}</s></td>
+		  {% else %}
+		  <td>{{ movie.title }}</td>
+		  {% endif %}
+		  <td>{{ movie.director }}</td>
+		  <td>{{ movie.genre }}</td>
+		  <td>{{ movie.description }}</td>
+		  <td><a href="{{ movie.imdb_link }}" target="_blank">Link</a></td>
+		  <td>{{ movie.rating }}</td>
+		  <td><a href="/edit/{{movie.id}}">Edit</a></td>
+		  <td><a href="/toggle/{{movie.id}}">Toggle</a></td>
+		  <td><a href="/delete/{{movie.id}}">Delete</a></td>
+		</tr>
+		{% empty %}
+		<tr>
+		  <td>You have no movies - add one!</td>
+		</tr>
+		{% endfor %}
+	</table>
+	<a href="/add">Add a movie</a>
+</body>
+
+</html>
