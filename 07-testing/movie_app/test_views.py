@@ -54,3 +54,21 @@ class TestViews(TestCase):
         self.assertRedirects(response, '/')
         updated_movie = Movie.objects.get(id=movie.id)
         self.assertFalse(updated_movie.watched)
+
+    def test_can_edit_movie(self):
+        movie = Movie.objects.create(title="The Living Daylights",
+                                     director="John Glen",
+                                     genre="Action",
+                                     rating=4,
+                                     watched=True,
+                                     imdb_link="https://www.imdb.com/title/tt0093428/")
+        response = self.client.post(f'/edit/{movie.id}',
+                                     {"title": "The Living Daylights",
+                                    "director": "John Glen",
+                                    "genre": "Action",
+                                    "rating": 5,
+                                    "imdb_link": "https://www.imdb.com/title/tt0093428/"},
+         )
+        self.assertRedirects(response, "/")
+        updated_movie = Movie.objects.get(id=movie.id)
+        self.assertEqual(updated_movie.rating, 5)
