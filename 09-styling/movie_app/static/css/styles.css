@@ -1,0 +1,113 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+#header{
+    margin: 0px auto;
+    width: 75%;
+}
+
+#formHeader{
+    margin: 0px auto;
+    width: 35%;
+}
+
+#headerText{
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+
+h1{
+    font-size: 48px;
+    margin-bottom: 0;
+}
+
+h4{
+    margin-top: 10px;
+}
+
+strike{
+    color:#ff5a60;
+}
+
+#homeImage{
+    height: 80px;
+    margin-top: 10px;
+    float: left;
+    margin-left: 10%;
+}
+
+.textHeader{
+    text-align: right;
+    margin-right: 10%;
+}
+
+.formHeader{
+    text-align: right;
+    margin-right: 25%;
+}
+
+#formImage{
+    height: 80px;
+    margin-top: 10px;
+    float: left;
+    margin-left: 25%;
+}
+form{
+    width: 35%;
+    margin: 0px auto;
+    box-shadow: 5px 10px 20px #e6ecf0;
+    padding: 40px 20px; 
+}
+
+table {
+    width: 75%;
+    margin: 60px auto;
+    box-shadow: 5px 10px 20px #e6ecf0;
+    background-color: white;
+    clear:both;
+    text-align:center;
+    padding: 20px 20px 20px;
+}
+
+th{
+    background-color: #e84610;
+    color: white;
+    padding: 5px;
+}
+td{
+    font-size: 14px;
+    background-color: white;
+}
+
+.title_column{
+    background-color: #e6ecf0;
+    color: #4a4a4f;
+    font-size: 18px; 
+    /* font-weight: 600; */
+}
+
+button {
+    background-color: #e6ecf0;
+    color: #4a4a4f;
+    border: 0;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: 1px solid #e6ecf0;
+}
+
+button:hover {
+    background-color: white;
+    color: #009FE3;
+}
+
+#addLink{
+    text-align:center;
+    margin-top: 20px;
+}
+
+p{
+    margin-left: 20px;
+}
