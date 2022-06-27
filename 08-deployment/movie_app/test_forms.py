@@ -15,7 +15,8 @@ class TestMovieForm(TestCase):
                           "genre": "Action",
                           "rating": 4,
                           "watched": True,
-                          "imdb_link": "https://www.imdb.com/title/tt0093428/"})
+                          "imdb_link": "https://www.imdb.com/title/tt0093428/"
+                          })
         self.assertTrue(form.is_valid())
 
     def test_watched_field_is_not_required(self):
@@ -24,7 +25,8 @@ class TestMovieForm(TestCase):
                           "description": "First Timothy Dalton",
                           "genre": "Action",
                           "rating": 4,
-                          "imdb_link": "https://www.imdb.com/title/tt0093428/"})
+                          "imdb_link": "https://www.imdb.com/title/tt0093428/"
+                          })
         self.assertTrue(form.is_valid())
 
     def test_fields_are_explicit_in_form_metaclass(self):

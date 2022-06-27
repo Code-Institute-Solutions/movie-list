@@ -26,4 +26,3 @@ def add_movie(request):
 
     return render(request, 'movie_app/add_movie.html')
 
-

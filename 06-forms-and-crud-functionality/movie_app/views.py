@@ -46,3 +46,4 @@ def delete_movie(request, movie_id):
     movie = get_object_or_404(Movie, id=movie_id)
     movie.delete()
     return redirect('get_movie')
+

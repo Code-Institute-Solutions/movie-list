@@ -26,10 +26,10 @@ class TestViews(TestCase):
 
     def test_can_add_movie(self):
         response = self.client.post('/add', {"title": "The Living Daylights",
-                                    "director": "John Glen",
-                                    "genre": "Action",
-                                    "rating": 4,
-                                    "imdb_link": "https://www.imdb.com/title/tt0093428/"})
+                                             "director": "John Glen",
+                                             "genre": "Action",
+                                             "rating": 4,
+                                             "imdb_link": "https://www.imdb.com/title/tt0093428/"})
         self.assertRedirects(response, '/')
 
     def test_can_delete_movie(self):
@@ -63,11 +63,11 @@ class TestViews(TestCase):
                                      watched=True,
                                      imdb_link="https://www.imdb.com/title/tt0093428/")
         response = self.client.post(f'/edit/{movie.id}',
-                                     {"title": "The Living Daylights",
-                                    "director": "John Glen",
-                                    "genre": "Action",
-                                    "rating": 5,
-                                    "imdb_link": "https://www.imdb.com/title/tt0093428/"},
+                                    {"title": "The Living Daylights",
+                                     "director": "John Glen",
+                                     "genre": "Action",
+                                     "rating": 5,
+                                     "imdb_link": "https://www.imdb.com/title/tt0093428/"},
          )
         self.assertRedirects(response, "/")
         updated_movie = Movie.objects.get(id=movie.id)

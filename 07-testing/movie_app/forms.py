@@ -10,4 +10,3 @@ class MovieForm(forms.ModelForm):
         model = Movie
         fields = ['title', 'director', 'genre', 'description', 'rating',
                   'watched', 'imdb_link']
-
