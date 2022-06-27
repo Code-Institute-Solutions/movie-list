@@ -1,101 +1,72 @@
-body{
-    font-family: 'Montserrat', sans-serif;
-
+body {
+    font-family: ‘Montserrat’, sans-serif;
 }
 
-#header{
-    margin: 0px auto;
-    width: 75%;
-}
-
-#formHeader{
-    margin: 0px auto;
-    width: 35%;
-}
-
-#headerText{
-    float: right;
-    width: 50%;
-    text-align: right;
-}
-
-h1{
+h1 {
     font-size: 48px;
     margin-bottom: 0;
+    text-align: right;
+    margin-right: 10%;
 }
 
-h4{
+h4 {
     margin-top: 10px;
+    text-align: right;
+    margin-right: 10%;
 }
 
-strike{
-    color:#ff5a60;
+s {
+    color: #ff5a60;
 }
 
-#homeImage{
+img {
     height: 80px;
     margin-top: 10px;
     float: left;
     margin-left: 10%;
 }
 
-.textHeader{
-    text-align: right;
-    margin-right: 10%;
-}
-
-.formHeader{
-    text-align: right;
-    margin-right: 25%;
-}
-
-#formImage{
-    height: 80px;
-    margin-top: 10px;
-    float: left;
-    margin-left: 25%;
-}
-form{
+form {
     width: 35%;
     margin: 0px auto;
-    box-shadow: 5px 10px 20px #e6ecf0;
-    padding: 40px 20px; 
+    box-shadow: 5px 10px 20px #E6ECF0;
+    padding: 40px 20px;
 }
 
 table {
     width: 75%;
     margin: 60px auto;
-    box-shadow: 5px 10px 20px #e6ecf0;
+    box-shadow: 5px 10px 20px #E6ECF0;
     background-color: white;
-    clear:both;
-    text-align:center;
+    clear: both;
+    text-align: center;
     padding: 20px 20px 20px;
 }
 
-th{
-    background-color: #e84610;
+th {
+    background-color: #E84610;
     color: white;
     padding: 5px;
 }
-td{
+
+td {
     font-size: 14px;
     background-color: white;
 }
 
-.title_column{
-    background-color: #e6ecf0;
-    color: #4a4a4f;
-    font-size: 18px; 
-    /* font-weight: 600; */
+td:nth-child(1) {
+    background-color: #E6ECF0;
+    color: #4A4A4F;
+    font-size: 18px;
 }
 
 button {
-    background-color: #e6ecf0;
-    color: #4a4a4f;
+    background-color: #E6ECF0;
+    color: #4A4A4F;
     border: 0;
     padding: 5px 10px;
     margin-right: 5px;
-    border: 1px solid #e6ecf0;
+    border: 1px solid #E6ECF0;
 }
 
 button:hover {
@@ -103,11 +74,11 @@ button:hover {
     color: #009FE3;
 }
 
-#addLink{
-    text-align:center;
+p:last-child {
+    text-align: center;
     margin-top: 20px;
 }
 
-p{
+p {
     margin-left: 20px;
 }
